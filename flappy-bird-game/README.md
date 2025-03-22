@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Flappy Bird Clone
 
-## Getting Started
+A responsive, feature-complete Flappy Bird clone built with React and TypeScript. This project recreates the classic mobile game with authentic visuals, sounds, and gameplay mechanics.
 
-First, run the development server:
+## Features
+
+- **Classic Gameplay**: Jump through pipes and try to achieve the highest score
+- **Original Graphics**: Authentic sprites and animations from the original game
+- **Sound Effects**: Original sound effects for jump, scoring, and collisions
+- **Responsive Design**: Play on desktop or mobile devices
+- **Mobile Support**: Tap to jump on touch devices
+- **Game States**: Start screen, gameplay, and game over screens
+
+## Technologies Used
+
+- React.js
+- TypeScript
+- HTML Canvas API
+- Next.js
+
+## Installation
+
+### Prerequisites
+
+- Node.js (v14.0.0 or higher)
+- npm or yarn
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/KalyanRajSahu-Snap/flappy-bird-clone.git
+cd flappy-bird-clone
+```
+
+### Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### Run Development Server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the game.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Play
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Start the game**: Press space bar or click/tap the game area
+- **Jump**: Press space bar or click/tap the game area during gameplay
+- **Restart**: Click the restart button after game over
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `FlappyBird.tsx` - Main game component containing game logic and rendering
+- Assets are loaded from a Vercel Blob Storage for optimal performance
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Game Logic
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The game implements the following core mechanics:
 
-## Deploy on Vercel
+- Gravity and jumping physics
+- Procedurally generated pipes with random heights
+- Collision detection between the bird and pipes
+- Score tracking and display
+- Animation states for the bird
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+You can customize the game by modifying the constants at the top of the file:
+
+```typescript
+const GRAVITY = 0.5
+const JUMP_STRENGTH = 10
+const PIPE_WIDTH = 52
+const PIPE_GAP = 150
+const PIPE_SPEED = 2
+const BIRD_WIDTH = 34
+const BIRD_HEIGHT = 24
+```
+
+## Deployment
+
+This project can be easily deployed to Vercel:
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+## Credits
+
+- Original Flappy Bird game created by Dong Nguyen
+- Sprites and audio are used for educational purposes
+
+## License
+
+[MIT](LICENSE)
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
