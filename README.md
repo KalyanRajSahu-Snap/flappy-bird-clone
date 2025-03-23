@@ -100,10 +100,6 @@ yarn build
 - Original Flappy Bird game created by Dong Nguyen
 - Sprites and audio are used for educational purposes
 
-## License
-
-[MIT](LICENSE)
-
 ## Contributing
 
 1. Fork the repository
